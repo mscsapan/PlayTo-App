@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-PreferredSizeWidget myAppBar() {
+PreferredSizeWidget myAppBar({bool isVisible = false}) {
   return AppBar(
     title: Padding(
       padding: const EdgeInsets.symmetric(
@@ -11,10 +11,26 @@ PreferredSizeWidget myAppBar() {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           barsIcon(),
-          const FaIcon(
-            FontAwesomeIcons.bell,
-            color: Colors.black54,
-          )
+          isVisible
+              ? const FaIcon(
+                  FontAwesomeIcons.bell,
+                  color: Colors.black54,
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    FaIcon(
+                      FontAwesomeIcons.glassMartiniAlt,
+                      size: 20.0,
+                      color: Colors.black54,
+                    ),
+                    SizedBox(width: 16.0),
+                    FaIcon(
+                      FontAwesomeIcons.bell,
+                      color: Colors.black54,
+                    )
+                  ],
+                )
         ],
       ),
     ),
