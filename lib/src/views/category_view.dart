@@ -14,8 +14,9 @@ class CategoryView extends StatelessWidget {
       width: _size.width,
       margin: const EdgeInsets.symmetric(horizontal: 14.0),
       child: Wrap(
-          spacing: 6.0,
-          runSpacing: 4.0,
+          //spacing: 6.0,
+          runSpacing: 10.0,
+          alignment: WrapAlignment.spaceBetween,
           children: List.generate(
             catTitle.length,
             (index) => SizedBox(
