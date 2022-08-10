@@ -10,4 +10,9 @@ class ControllerCubit extends Cubit<int> {
   void changeState(int index) {
     emit(currentIndex = index);
   }
+
+  int catTitleIndex = 0;
+  void catTitleState(int index) {
+    emit(catTitleIndex = index);
+  }
 }
