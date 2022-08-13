@@ -10,12 +10,12 @@ class SingleImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: -5.0,
+      top: -10.0,
       left: leftPosition,
       bottom: 0.0,
       child: Container(
-        height: 50.0,
-        width: 50.0,
+        height: 46.0,
+        width: 46.0,
         decoration: const BoxDecoration(
           color: Colors.white,
           shape: BoxShape.circle,

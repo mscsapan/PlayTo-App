@@ -21,43 +21,47 @@ class CategoryPlayView extends StatelessWidget {
           return SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             physics: const ClampingScrollPhysics(),
-            child: Row(
-              children: List.generate(
-                catTitle2.length,
-                (index) {
-                  bool position = _controller.catTitleIndex == index;
-                  return Padding(
-                    padding: const EdgeInsets.only(left: 14.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        _controller.catTitleState(index);
-                        debugPrint(catTitle2[index]);
-                      },
-                      child: Container(
-                        height: _size.height * 0.05,
-                        width: _size.width / 2.6,
-                        margin: const EdgeInsets.only(right: 0.0),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: position ? Colors.pink : Colors.transparent,
-                          border: Border.all(
-                              color:
-                                  position ? Colors.transparent : Colors.grey),
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                        child: Text(
-                          catTitle2[index],
-                          style: GoogleFonts.openSans(
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w600,
-                            color: position ? Colors.white : Colors.black,
-                            letterSpacing: 1.5,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14.0),
+              child: Row(
+                children: List.generate(
+                  catTitle2.length,
+                  (index) {
+                    bool position = _controller.catTitleIndex == index;
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          _controller.catTitleState(index);
+                          debugPrint(catTitle2[index]);
+                        },
+                        child: Container(
+                          height: _size.height * 0.05,
+                          width: _size.width / 2.6,
+                          margin: const EdgeInsets.only(right: 0.0),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: position ? Colors.pink : Colors.transparent,
+                            border: Border.all(
+                                color: position
+                                    ? Colors.transparent
+                                    : Colors.grey),
+                            borderRadius: BorderRadius.circular(5.0),
+                          ),
+                          child: Text(
+                            catTitle2[index],
+                            style: GoogleFonts.openSans(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w600,
+                              color: position ? Colors.white : Colors.black,
+                              letterSpacing: 1.5,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ),
           );

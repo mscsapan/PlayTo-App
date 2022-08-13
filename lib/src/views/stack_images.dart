@@ -8,17 +8,17 @@ class StackImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
-    return Container(
-      width: _size.width / 3.2,
+    return SizedBox(
+      width: _size.width / 4.5,
       height: _size.height * 0.06,
-      color: Colors.white,
+      // color: Colors.red,
       child: Stack(
         clipBehavior: Clip.none,
         // fit: StackFit.expand,
         children: [
           Container(
-            height: 44.0,
-            width: 44.0,
+            height: 40.0,
+            width: 40.0,
             decoration: BoxDecoration(
               color: Colors.red,
               shape: BoxShape.circle,
@@ -30,20 +30,16 @@ class StackImages extends StatelessWidget {
             // child: Image.asset(image, fit: BoxFit.cover),
           ),
           const SingleImage(
-            leftPosition: 14,
+            leftPosition: 16,
             imageNo: 1,
           ),
           const SingleImage(
-            leftPosition: 25,
+            leftPosition: 26,
             imageNo: 2,
           ),
           const SingleImage(
             leftPosition: 36,
             imageNo: 3,
-          ),
-          const SingleImage(
-            leftPosition: 46,
-            imageNo: 4,
           ),
         ],
       ),

@@ -5,9 +5,10 @@ import 'package:play_to_app/src/data/data_list.dart';
 import 'package:play_to_app/src/views/event_details.dart';
 
 class CategoryDetails extends StatelessWidget {
-  const CategoryDetails({Key? key}) : super(key: key);
+  const CategoryDetails({Key? key, required this.title}) : super(key: key);
   final String description =
       'Lapangan Trior Kebon Jeruk Jakarta baslaski Istavanto Sikando';
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class CategoryDetails extends StatelessWidget {
     return Container(
       height: _size.height * 0.34,
       width: _size.width,
-      padding: const EdgeInsets.symmetric(horizontal: 14.0),
+      padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 8.0),
       child: Card(
         elevation: 6.0,
         child: Padding(
@@ -28,7 +29,7 @@ class CategoryDetails extends StatelessWidget {
                   children: [
                     const TextSpan(text: '⚽ '),
                     TextSpan(
-                      text: 'Yuk sehat bersama',
+                      text: title,
                       style: GoogleFonts.openSans(
                         fontSize: 16.0,
                         color: Colors.black.withOpacity(0.8),
@@ -65,7 +66,7 @@ class CategoryDetails extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: List.generate(
-                  eventTitle.length,
+                  eventDate.length,
                   (index) => Container(
                     width: _size.width / 2.4,
                     height: _size.height * 0.05,
@@ -84,7 +85,7 @@ class CategoryDetails extends StatelessWidget {
                             color: Colors.black.withOpacity(0.5),
                           ),
                           Text(
-                            eventTitle[index],
+                            eventDate[index],
                             style: GoogleFonts.openSans(
                               fontSize: 14.0,
                               fontWeight: FontWeight.w600,

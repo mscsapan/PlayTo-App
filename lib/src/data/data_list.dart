@@ -26,7 +26,14 @@ final List<IconData> eventIcons = [
   FontAwesomeIcons.mobile,
   FontAwesomeIcons.calendar,
 ];
-final List<String> eventTitle = [
+final List<String> eventDate = [
   'Rp 3000 / Orange',
   '12 Des, 13.00 WIB',
+];
+
+final List<String> eventTitle = [
+  'Yuk sehat bersama',
+  'Alumni Unsri Kumpul Yuki',
+  'Sepakbola ria',
+  'Unpansi Uduku Liya',
 ];

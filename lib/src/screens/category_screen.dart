@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play_to_app/src/data/data_list.dart';
 import 'package:play_to_app/src/views/category_details.dart';
 import 'package:play_to_app/src/views/category_play_view.dart';
 import 'package:play_to_app/src/views/my_app_bar.dart';
@@ -19,13 +20,21 @@ class CategoryScreen extends StatelessWidget {
         height: _size.height,
         width: _size.width,
         child: ListView(
-          children: const [
-            CategoryHeading(
+          physics: const BouncingScrollPhysics(),
+          children: [
+            const CategoryHeading(
               leftTitle: 'Kategory Olahraga',
               r8Title: '',
             ),
-            CategoryPlayView(),
-            CategoryDetails(),
+            const CategoryPlayView(),
+            Column(
+              children: List.generate(
+                eventTitle.length,
+                (index) => CategoryDetails(
+                  title: eventTitle[index],
+                ),
+              ),
+            ),
           ],
         ),
       ),

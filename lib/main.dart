@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:play_to_app/src/logic/controller_cubit.dart';
 import 'package:play_to_app/src/screens/category_screen.dart';
+import 'package:play_to_app/src/screens/football_event_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +16,7 @@ void main() {
       home: BlocProvider<ControllerCubit>(
         create: (BuildContext context) => ControllerCubit(),
         // child: const Home(),
-        child: const CategoryScreen(),
+        child: const FootBallEventScreen(),
       ),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
