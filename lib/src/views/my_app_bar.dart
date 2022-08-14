@@ -68,3 +68,24 @@ barsIcon() {
     ],
   );
 }
+
+PreferredSizeWidget footBallAppBar() => AppBar(
+      actions: [
+        IconButton(
+          onPressed: () {},
+          splashRadius: 24.0,
+          icon: const Icon(
+            Icons.share,
+            color: Colors.black,
+          ),
+        ),
+        IconButton(
+          onPressed: () {},
+          splashRadius: 24.0,
+          icon: const Icon(
+            FontAwesomeIcons.ellipsisV,
+            color: Colors.black,
+          ),
+        ),
+      ],
+    );
