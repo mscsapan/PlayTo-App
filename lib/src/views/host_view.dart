@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:play_to_app/src/views/text_style.dart';
 
 class HostView extends StatelessWidget {
-  const HostView({Key? key}) : super(key: key);
+  const HostView({Key? key, required this.image, required this.name})
+      : super(key: key);
+  final String image;
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,7 @@ class HostView extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
                   child: Image.asset(
-                    'assets/images/1.jpg',
+                    image,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -38,7 +41,7 @@ class HostView extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        'Mohammad Ali',
+                        name,
                         style: textStyle2(),
                       ),
                       Container(

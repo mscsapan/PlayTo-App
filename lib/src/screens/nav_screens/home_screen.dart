@@ -20,6 +20,7 @@ class HomeScreen extends StatelessWidget {
         width: _size.width,
         //margin: const EdgeInsets.symmetric(horizontal: 14.0),
         child: ListView(
+          physics: const ClampingScrollPhysics(),
           children: const [
             HeadingTitle(),
             BlurImageView(),

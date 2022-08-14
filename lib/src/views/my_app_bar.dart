@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+const Color iconColor = Colors.black;
+
 PreferredSizeWidget myAppBar({bool isVisible = false}) {
   return AppBar(
     title: Padding(
@@ -54,7 +56,7 @@ barsIcon() {
         child: Divider(
           color: Colors.black,
           thickness: 2.0,
-          height: 16,
+          height: 14,
         ),
       ),
       SizedBox(
@@ -70,13 +72,14 @@ barsIcon() {
 }
 
 PreferredSizeWidget footBallAppBar() => AppBar(
+      leading: const Icon(Icons.arrow_back, color: iconColor),
       actions: [
         IconButton(
           onPressed: () {},
           splashRadius: 24.0,
           icon: const Icon(
             Icons.share,
-            color: Colors.black,
+            color: iconColor,
           ),
         ),
         IconButton(
@@ -84,7 +87,7 @@ PreferredSizeWidget footBallAppBar() => AppBar(
           splashRadius: 24.0,
           icon: const Icon(
             FontAwesomeIcons.ellipsisV,
-            color: Colors.black,
+            color: iconColor,
           ),
         ),
       ],

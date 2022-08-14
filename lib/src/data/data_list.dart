@@ -37,3 +37,16 @@ final List<String> eventTitle = [
   'Sepakbola ria',
   'Unpansi Uduku Liya',
 ];
+
+final List<String> images = [
+  'assets/images/1.jpg',
+  'assets/images/2.jpg',
+  'assets/images/3.jpg',
+  'assets/images/4.jpg',
+];
+final List<String> names = [
+  'Muhammad Ali',
+  'Sara Khan',
+  'Jenny Noor',
+  'Alia Vatt',
+];

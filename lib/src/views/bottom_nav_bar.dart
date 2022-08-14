@@ -15,8 +15,8 @@ class BottomNavBar extends StatelessWidget {
         return SizedBox(
           height: 70.0,
           child: BottomNavigationBar(
-            selectedItemColor: Colors.grey,
-            unselectedItemColor: Colors.grey[300],
+            selectedItemColor: Colors.blueGrey,
+            unselectedItemColor: Colors.grey,
             selectedFontSize: 12.0,
             unselectedFontSize: 10.0,
             elevation: 6.0,

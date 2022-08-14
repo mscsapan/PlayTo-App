@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:play_to_app/src/views/footbal_bottom_nav.dart';
+import 'package:play_to_app/src/data/data_list.dart';
+import 'package:play_to_app/src/views/football_bottom_nav.dart';
 import 'package:play_to_app/src/views/host_view.dart';
 import 'package:play_to_app/src/views/schedule_views.dart';
 
@@ -63,7 +64,19 @@ class FootBallEventScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const HostView()
+            Flexible(
+              child: SingleChildScrollView(
+                physics: const ClampingScrollPhysics(),
+                child: Column(
+                  children: List.generate(
+                      images.length,
+                      (index) => HostView(
+                            image: images[index],
+                            name: names[index],
+                          )),
+                ),
+              ),
+            ),
           ],
         ),
       ),
